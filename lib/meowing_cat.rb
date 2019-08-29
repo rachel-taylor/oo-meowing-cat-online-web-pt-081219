@@ -1,30 +1,16 @@
 class Cat 
-  attr_reader :name
-  
-  def initialize(name)
+ def initialize(name, age, location)
     @name = name
-    @asleep = false
-    @age = 0
+    @age = age
+    @location = location
   end
-
+  def name=(name)
+    @name = name
+  end
+  def name
+    @name
+  end
   def speak
-    "#{@name} meows."    
+    puts "Meow!"
   end
-  
-  def go_to_bed
-    @asleep = true
-  end
-  
-  def wake_up
-    @asleep = false   
-  end
-  
-  def asleep?
-    @asleep
-  end
-  
-  def get_older
-    @age += 1
-  end
-  
 end 
